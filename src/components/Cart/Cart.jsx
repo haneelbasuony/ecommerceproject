@@ -23,14 +23,12 @@ export default function Cart() {
     useMutationCart(updateCount);
 
   let { cartId } = data?.data || {};
-  console.log(cartId);
 
   const gotoPayment = () => {
     navigate('/payment', { state: { cartId } });
   };
   setNumItems(data?.data?.numOfCartItems);
-  if (isLoading || clearPending || deletPending || countPending)
-    return <Loading></Loading>;
+  if (isLoading || clearPending || deletPending) return <Loading></Loading>;
   if (!data?.data?.numOfCartItems) {
     return (
       <div className="flex flex-wrap flex-col justify-center items-center h-screen">
