@@ -1,6 +1,5 @@
 # Ecommerce Project
 
-![Project Banner](https://haneelbasuony.github.io/ecommerceproject/banner.png)
 
 ## 🚀 Overview
 Ecommerce Project is a web application built with React and Vite, providing a seamless online shopping experience. The project leverages modern frontend technologies to ensure fast performance and scalability.
