@@ -65,7 +65,7 @@ export default function Navbar() {
               <li>
                 <Link
                   to="/home"
-                  className="block py-2 px-3 lg:bg-transparent text-gray-500 lg:hover:text-green-color lg:p-0 dark:text-white lg:dark:text-blue-500"
+                  className=" block py-2 px-3 lg:bg-transparent text-gray-500 lg:hover:text-green-color lg:p-0 dark:text-white lg:dark:text-blue-500"
                   aria-current="page"
                 >
                   Home
@@ -137,45 +137,18 @@ export default function Navbar() {
 
             {isLogin ? (
               <li>
-                <i className="fa-solid fa-shopping-cart text-gray-500 dark:text-white "></i>
-                <span className="text-gray-700 dark:text-white ms-2 font-bold ">
-                  {numItems}
-                </span>
+                <Link
+                  to="/allorders"
+                  className="block py-2 px-3 text-gray-500 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-green-color lg:p-0 dark:text-white lg:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent"
+                >
+                  All Orders
+                </Link>
               </li>
             ) : (
               ''
             )}
           </ul>
           <ul className="font-medium flex flex-col p-4 lg:p-0 mt-4  lg:flex-row lg:space-x-8 rtl:space-x-reverse lg:mt-0 lg:border-0  dark:bg-gray-800 lg:dark:bg-gray-900 dark:border-gray-700">
-            {isLogin ? (
-              <li onClick={logout}>
-                <span
-                  href="#"
-                  className="cursor-pointer block py-2 px-3 text-gray-500 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-red-600 lg:p-0 dark:text-white lg:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent"
-                >
-                  Logout
-                </span>
-              </li>
-            ) : (
-              <>
-                <li>
-                  <Link
-                    to="/"
-                    className="block py-2 px-3 text-gray-500 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-green-color lg:p-0 dark:text-white lg:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent"
-                  >
-                    Login
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/register"
-                    className="block py-2 px-3 text-gray-500 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-green-color lg:p-0 dark:text-white lg:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent"
-                  >
-                    Register
-                  </Link>
-                </li>
-              </>
-            )}
             <li>
               <a
                 href="#"
@@ -217,6 +190,45 @@ export default function Navbar() {
                 </span>
               </label>
             </li>
+            {isLogin ? (
+              <li>
+                <i className="fa-solid fa-shopping-cart text-gray-500 dark:text-white "></i>
+                <span className="text-gray-700 dark:text-white ms-2 font-bold ">
+                  {numItems}
+                </span>
+              </li>
+            ) : (
+              ''
+            )}
+            {isLogin ? (
+              <li onClick={logout}>
+                <span
+                  href="#"
+                  className="cursor-pointer block py-2 px-3 text-gray-500 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-red-600 lg:p-0 dark:text-white lg:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent"
+                >
+                  Logout
+                </span>
+              </li>
+            ) : (
+              <>
+                <li>
+                  <Link
+                    to="/"
+                    className="block py-2 px-3 text-gray-500 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-green-color lg:p-0 dark:text-white lg:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent"
+                  >
+                    Login
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/register"
+                    className="block py-2 px-3 text-gray-500 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-green-color lg:p-0 dark:text-white lg:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent"
+                  >
+                    Register
+                  </Link>
+                </li>
+              </>
+            )}
           </ul>
         </div>
       </div>
