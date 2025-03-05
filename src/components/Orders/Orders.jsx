@@ -1,5 +1,3 @@
-import { jwtDecode } from 'jwt-decode';
-import React from 'react';
 import useAllOrders from '../../hooks/useAllOrders';
 import Loading from '../Loading/Loading';
 
